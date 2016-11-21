@@ -1,6 +1,6 @@
 #Tutorial on BDT reweighter
 
-We are considering reweighting problem (introduction to this problem can be found in [post](http://arogozhnikov.github.io/2015/10/09/gradient-boosted-reweighter.html) and show how parameters of classifier/regressors tuning affect on the reweighting rule reconstruction.
+We are considering reweighting problem (introduction to this problem can be found in the [post](http://arogozhnikov.github.io/2015/10/09/gradient-boosted-reweighter.html)) and show how parameters of classifier/regressors tuning affect on the reweighting rule reconstruction.
 
 Tutorial notebook consists of several parts:
 * Neural network parameters: demonstration how these parameters influence reweighting rule;
