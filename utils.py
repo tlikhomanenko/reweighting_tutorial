@@ -219,7 +219,9 @@ def check_reweighting_by_ML_gb(original, target, original_weights, target_weight
         Ytr = numpy.array([0] * original_tr.shape[0] + [1] * target_tr.shape[0])
         Wtr = numpy.concatenate([original_w, target_w])
     
-        clf = GradientBoostingClassifier(n_estimators=50, subsample=0.5).fit(Xtr, Ytr, sample_weight=Wtr)
+        clf = GradientBoostingClassifier(n_estimators=200, subsample=0.5, 
+                                         min_samples_leaf=100, learning_rate=0.1, 
+                                         max_depth=6).fit(Xtr, Ytr, sample_weight=Wtr)
         proba = clf.predict_proba(Xts)[:, 1]
         aucs.append(roc_auc_score(Yts, proba, sample_weight=Wts))
         
